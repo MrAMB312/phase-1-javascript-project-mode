@@ -22,3 +22,12 @@ a {
 .subtitle {
     padding: 10px 0 10px 0;
 }
+
+.color-code {
+    display: inline-block;
+    width: 30%;
+}
+
+#hex-codes-div {
+    padding: 20px 40px 60px 40px;
+}
