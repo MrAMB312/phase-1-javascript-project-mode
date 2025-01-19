@@ -26,14 +26,9 @@
     width: 20%;
 }
 
-.card {
+p {
     text-align: center;
     display: inline-grid;
-    border: black solid 1px;
     padding: 10px;
     margin: 10px;
-}
-
-#hex-codes-div {
-    padding: 5px 10px 50px 10px;
 }
