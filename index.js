@@ -1,4 +1,19 @@
-document.addEventListener('DOMContentLoaded', () => main());
+document.addEventListener('DOMContentLoaded', () => 
+    document.querySelectorAll('.color-icon').forEach(icon => { 
+        icon.addEventListener('mouseover', (event) => {
+            event.target.style.color = 'white';
+        })
+
+        icon.addEventListener('mouseout', (event) => {
+            event.target.style.color = '';
+        })
+        
+        icon.addEventListener('click', (event) => {
+            const colorName = event.target.textContent.toLowerCase();
+            loadHexData(colorName, colors);
+        })
+    })
+);
 
 let colors = {};
 
@@ -159,21 +174,4 @@ function loadHexData(colorName, colors) {
     
     hexContainer.textContent = '';
     hexContainer.appendChild(card);
-}
-
-function main() {
-    document.querySelectorAll('.color-icon').forEach(icon => { 
-        icon.addEventListener('mouseover', (event) => {
-            event.target.style.color = 'white';
-        })
-
-        icon.addEventListener('mouseout', (event) => {
-            event.target.style.color = '';
-        })
-        
-        icon.addEventListener('click', (event) => {
-            const colorName = event.target.textContent.toLowerCase();
-            loadHexData(colorName, colors);
-        })
-    })
 }
